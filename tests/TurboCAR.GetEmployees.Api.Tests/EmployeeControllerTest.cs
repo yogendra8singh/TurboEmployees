@@ -27,14 +27,14 @@ namespace TurboCAR.GetEmployees.Api.Tests
             employees = JsonConvert.DeserializeObject<List<Employee>>("[{\"id\":\"E1000280\",\"name\":\"Yash Chawla\",\"teamId\":101},{\"id\":\"E1000281\",\"name\":\"Nithya Dhamodharan\",\"teamId\":102},{\"id\":\"E1000282\",\"name\":\"Thomas Armstrong\",\"teamId\":103},{\"id\":\"E1000283\",\"name\":\"Dino Pillinini\",\"teamId\":104},{\"id\":\"E1000301\",\"name\":\"Daniel Aguilar\",\"teamId\":101},{\"id\":\"E1000302\",\"name\":\"Carley Brandt\",\"teamId\":102},{\"id\":\"E1000303\",\"name\":\"Claudia Canales\",\"teamId\":103},{\"id\":\"E1000304\",\"name\":\"Jamie Davidson\",\"teamId\":104}]");
         }
 
-        [Fact]
-        public async Task GetAsyncTest()
-        {
-            repository.GetAsync().Returns(Task.Run(() => employees));
-            var result = controller.Get();
-            int actual = result.Result.Count;
-            Assert.True(actual == employees.Count);
-        }
+        //[Fact]
+        //public async Task GetAsyncTest()
+        //{
+        //    repository.GetAsync().Returns(Task.Run(() => employees));
+        //    var result = controller.Get();
+        //    int actual = result.Result.Count;
+        //    Assert.True(actual == employees.Count);
+        //}
 
         [Fact]
         public async Task GetAsyncWithParameterTest()
