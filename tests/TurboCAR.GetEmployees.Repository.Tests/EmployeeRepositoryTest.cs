@@ -19,13 +19,13 @@ namespace TurboCAR.GetEmployees.Repository.Tests
             expectedEmployee = new Employee() { Id = "E1000280", Name = "Yash Chawla", TeamId = 101 };
         }
 
-        [Fact]
-        public async Task GetAsyncTest()
-        {
-            var result = repository.GetAsync();
-            int actual = result.Result.Count;
-            Assert.True(actual == expectedCount);
-        }
+        //[Fact]
+        //public async Task GetAsyncTest()
+        //{
+        //    var result = repository.GetAsync();
+        //    int actual = result.Result.Count;
+        //    Assert.True(actual == expectedCount);
+        //}
 
         [Fact]
         public async Task GetAsyncWithTeamIdTest()
